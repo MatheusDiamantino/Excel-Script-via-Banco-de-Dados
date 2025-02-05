@@ -16,42 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             return preg_replace('/[^a-zA-Zà-úÀ-Ú\s\,.\']/', '', $nome);
         }
 
-        function filtrarCPF($cpf)
-        {
-            return preg_replace('/\D/', '', $cpf);
-        }
-
-        function filtrarTicket($ticket)
-        {
-            return preg_replace('/\D/', '', $ticket);
-        }
-
-        function filtrarTelefone($telefone)
-        {
-            return preg_replace('/\D/', '', $telefone);
-        }
-
-        function filtrarInstagram($instagram)
-        {
-            return preg_replace('/[^a-zA-Zà-úÀ-Ú\s\.,_$#!&*()@\'-]/', '', $instagram);
-        }
-
-        function filtrarConta($conta_reals)
-        {
-            return preg_replace('/\D/', '', $conta_reals);
-        }
-
-        function filtrarValor($valor_saque)
-        {
-            return preg_replace('/\D/', '', $valor_saque);
-        }
-
-        function filtrarData($data_ticket)
-        {
-            return preg_replace('/[^0-9\/\-\s\t:]/', '', $data_ticket);
-        }
-
-        // Filtrar campos do formulário
         $nome_filtrado = filtrarNome($_POST['nome_completo']);
         $tipo_solicitacao = $_POST['tipo_solicitacao'];
         $data_solicitacao = $_POST['data_solicitacao'];
